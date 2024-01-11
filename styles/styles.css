@@ -1,13 +1,76 @@
 body {
-    background-color: red;
+    background-color: lightblue;
+}
+
+header {
+    width: 100%;
+    text-align: center; 
+    letter-spacing: 2px;
+    color: blue;
+}
+
+.content {
+    display: flex;
+    margin: 5px;
 }
 
 .input {
-    width: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 2px;
+}
+
+#city-input {
+    height: 10%;
+    border: solid 2px white;
+    background-color: lightblue;
+}
+
+#submit-button {
+    height: 10%;
+    border: solid 2px white;
+}
+
+#search-history button {
+    margin: 2px;
 }
 
 .forecast {
     background-color: blue;
+    width: 85%;
     padding: 5px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    color: lightblue;
 }
 
+#current-forecast-section {
+    height: 200px;
+    width: 15%;
+}
+
+.current-forecast {
+    width: 130px;
+    padding: 1.5px;
+    border: solid 2px white;
+    text-align: center;
+    height: 195%
+}
+
+ #five-day-forecast-section {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: space-between;
+ }
+
+ .future-forecast{
+    width: 110px;
+    padding: 1.5px;
+    border: solid 2px white;
+    text-align: center;
+    height: 98%;
+ }

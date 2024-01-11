@@ -33,6 +33,7 @@ let currentWeather
 
 const createCurrentForecast = (day) => {
     let forecastDiv = document.createElement('div')
+    forecastDiv.setAttribute('class', 'current-forecast')
     let nameDisplay = document.createElement('h2')
     nameDisplay.textContent = cityInput
     forecastDiv.appendChild(nameDisplay)
@@ -57,6 +58,7 @@ const createCurrentForecast = (day) => {
 
 const createFiveDayForecast = (day, index) => {
     let forecastDiv = document.createElement('div')
+    forecastDiv.setAttribute('class', 'future-forecast')
     let dateDisplay = document.createElement('h3')
     dateDisplay.textContent = dayjs().add(index + 1, 'day').format('MM/DD/YYYY')
     forecastDiv.appendChild(dateDisplay)
@@ -106,6 +108,7 @@ const saveInput = () => {
     currentForecastSection.innerText = ''
     fiveDayForecastSection.innerText = ''
     cityInput = cityInputField.value
+    cityInputField.value=''
     if (!searchHistory.includes(cityInput)) {
         searchHistory.push(cityInput)
         displaySearchHistory(cityInput)
